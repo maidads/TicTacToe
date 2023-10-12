@@ -14,6 +14,7 @@ public class Move {
                 sc.next();         // discards the invalid input
             }
             move = sc.nextInt();
+           // nextPlayer = (nextPlayer == 'X') ? 'O' : 'X';
         } while (move < 1 || move > 9);
         return move;
     }

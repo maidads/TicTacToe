@@ -14,10 +14,9 @@ public class Main extends GameBoard {
         for (int i = 0; i < 9; i++) {
             boolean moveMade = false;
             while (!moveMade) {
-                int getPlayerMove = sc.nextInt();
                 int move = getPlayerMove(sc);
                 sc.nextLine();
-                moveMade = Move.makeMove(board, getPlayerMove, currentPlayer);
+                moveMade = Move.makeMove(board, move, currentPlayer);
                 printBoard(board);
                 moveCount++;            // ++ för every move
 
@@ -25,8 +24,10 @@ public class Main extends GameBoard {
                     System.out.println("It's a draw!");
                     break;
                 }
-                currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
             }
+            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
         }
+        System.out.println("Thanky for playing my game! ");
+        System.out.println("Do you want to play again? Type 'Yes' or 'No': ");
     }
 }
