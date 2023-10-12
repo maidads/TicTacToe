@@ -12,7 +12,7 @@ public class Main extends GameBoard {
         char currentPlayer = 'X';
 
         for (int i = 0; i < 9; i++) {
-            System.out.println("Player " + currentPlayer + ", make your move (1-9):");
+            System.out.println("Player " + currentPlayer + ", where do you want to put your X (1-9)?");
             int playerMove = sc.nextInt();
             sc.nextLine();
         }
