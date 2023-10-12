@@ -9,12 +9,12 @@ public class Main extends GameBoard {
         printBoard(board);                  // prints it
 
         int moveCount = 0;
-        char currentPlayer = 'X';
 
         for (int i = 0; i < 9; i++) {
-            System.out.println("Player " + currentPlayer + ", where do you want to put your X (1-9)?");
-            int playerMove = sc.nextInt();
+            int move = getPlayerMove(sc);
             sc.nextLine();
+            printBoard(board);
+            moveCount++;            // ++ för every move
         }
 
     }

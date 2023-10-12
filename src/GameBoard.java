@@ -1,4 +1,4 @@
-public class GameBoard {
+public class GameBoard extends Move {
     public static char[][] createBoard() {
         char[][] board = new char[3][3];        // two-dimensional array with 3 rows and 3 columns
         int count = 1;
