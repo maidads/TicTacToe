@@ -7,12 +7,12 @@ public class Move {
     public static int getPlayerMove(Scanner sc) {
         int move;
         do {
-            while (!sc.hasNextInt()) {
+            while (!sc.hasNextInt()) {      // as long as the player has not written an integer
                 System.out.println("That's not a valid move! Please enter a valid number:");
                 sc.next();         // discards the invalid input
             }
             move = sc.nextInt();
-        } while (move < 1 || move > 9);
+        } while (move < 1 || move > 9);    // the code continues until player's move is 1 > move < 9
         return move;
     }
 
