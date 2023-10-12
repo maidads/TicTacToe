@@ -6,5 +6,6 @@ public class Main extends GameBoard {
 
         System.out.println("Welcome to the game called TicTacToe!!");
         char[][] board = createBoard();     // creates and fills the board
+        printBoard(board);                  // prints it
     }
 }
