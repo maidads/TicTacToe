@@ -9,17 +9,23 @@ public class Main extends GameBoard {
         printBoard(board);                  // prints it
 
         int moveCount = 0;
+        char currentPlayer = 'X';
 
         for (int i = 0; i < 9; i++) {
-            int getPlayerMove = sc.nextInt();
-            int move = getPlayerMove(sc);
-            sc.nextLine();
-            printBoard(board);
-            moveCount++;            // ++ för every move
             boolean moveMade = false;
-            moveMade = Move.makeMove(board, getPlayerMove, currentPlayer);
-            if (!moveMade) {
+            while (!moveMade) {
+                int getPlayerMove = sc.nextInt();
+                int move = getPlayerMove(sc);
+                sc.nextLine();
+                moveMade = Move.makeMove(board, getPlayerMove, currentPlayer);
+                printBoard(board);
+                moveCount++;            // ++ för every move
 
+                if (moveCount == 9) {
+                    System.out.println("It's a draw!");
+                    break;
+                }
+                currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
             }
         }
     }

@@ -11,7 +11,7 @@ public class Move {
             System.out.println("Player " + nextPlayer + ", choose a place 1-9: ");
             while (!sc.hasNextInt()) {
                 System.out.println("That's not a valid move! Please enter a valid number:");
-                sc.next();         // Discards the invalid input
+                sc.next();         // discards the invalid input
             }
             move = sc.nextInt();
         } while (move < 1 || move > 9);
@@ -25,7 +25,6 @@ public class Move {
         int col = (move - 1) % 3;
         if (board[row][col] != 'X' && board[row][col] != 'O') {     // checks if the place is taken
             board[row][col] = currentPlayer;
-            char nextPlayer = (currentPlayer == 'X') ? 'O' : 'X';
             return true;
         } else {
             System.out.println("It's already taken! Please choose another place: ");
