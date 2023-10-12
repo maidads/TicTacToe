@@ -13,4 +13,15 @@ public class GameBoard {
     }
 
 
+    public static void printBoard(char[][] board) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print("| " + board[i][j] + " ");
+            }
+            System.out.println("|"); // Lägger till den sista vertikala linjen och går till en ny rad
+            if (i < 2) { // Om vi inte är på den sista raden
+                System.out.println("-------------"); // Skriver ut en rad med horisontella linjer
+            }
+        }
+    }
 }
