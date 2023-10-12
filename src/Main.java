@@ -31,7 +31,7 @@ public class Main extends GameBoard {
             }
             currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
         }
-        System.out.println("Thanky for playing my game! ");
+        System.out.println("Thank you for playing my game! ");
         System.out.println("Do you want to play again? Type 'Yes' or 'No': ");
     }
 }
