@@ -11,11 +11,16 @@ public class Main extends GameBoard {
         int moveCount = 0;
 
         for (int i = 0; i < 9; i++) {
+            int getPlayerMove = sc.nextInt();
             int move = getPlayerMove(sc);
             sc.nextLine();
             printBoard(board);
             moveCount++;            // ++ för every move
-        }
+            boolean moveMade = false;
+            moveMade = Move.makeMove(board, getPlayerMove, currentPlayer);
+            if (!moveMade) {
 
+            }
+        }
     }
 }
