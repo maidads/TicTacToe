@@ -8,7 +8,7 @@ public class Move {
         int move;
         do {
             while (!sc.hasNextInt()) {      // as long as the player has not written an integer
-                System.out.println("That's not a valid move! Please enter a valid number:");
+                System.out.println("That's not a valid move! Please enter a valid number: ");
                 sc.next();         // discards the invalid input
             }
             move = sc.nextInt();

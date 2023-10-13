@@ -5,7 +5,7 @@ public class GameBoard extends Move {
         for (int i = 0; i < 3; i++) {           // these two loops go through every place in my 3x3 array
             for (int j = 0; j < 3; j++) {
                 // i assign each location in my array a char. I convert the result to a character.
-                board[i][j] = (char) (count + '0');
+                board[i][j] = (char) (count + '0');     // convert to char
                 count++;
             }
         }
@@ -24,5 +24,4 @@ public class GameBoard extends Move {
             }
         }
     }
-
 }
