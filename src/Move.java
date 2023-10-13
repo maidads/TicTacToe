@@ -8,10 +8,13 @@ public class Move {
         int move;
         do {
             while (!sc.hasNextInt()) {      // as long as the player has not written an integer
-                System.out.println("That's not a valid move! Please enter a valid number: ");
+                System.out.println("That's not a valid move! Please choose a number between 1 and 9: ");
                 sc.next();         // discards the invalid input
             }
             move = sc.nextInt();
+            if (move < 1 || move > 9) {
+                System.out.println("That's not a valid move! Please choose a number between 1 and 9: ");
+            }
         } while (move < 1 || move > 9);    // the code continues until player's move is 1 > move < 9
         return move;
     }
